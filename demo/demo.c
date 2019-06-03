@@ -164,6 +164,8 @@ void* loop4(void *data) // iBeacon read
 				RSSI[2] = buffer[69];
 				printf("TxPower: %s, RSSI: %s\n", TxPower, RSSI);
 				int q = calc_dist(TxPower, RSSI);
+				if(q==0)
+					continue;
 				string[0]='1';
 				string[1]=' ';
 				string[2]='1';
@@ -218,6 +220,16 @@ void* loop5(void *data) // PIR
 	}
 }
 int main(int argc, char* argv[]) {
+	if((fd=serialOpen("/dev/serial0",9600))<0)
+	{
+		fprintf(stderr,"Unable to open serial device: %s\n",strerror(errno));
+		return 1;
+	}
+	if(wiringPiSetup()==-1)
+	{
+		fprintf(stdout,"Unable to start wiringPi: %s\n",strerror(errno));
+		return 1;
+	}
 	void init_iBeacon();
 	//init server client
 	static struct sockaddr_in server_addr;
