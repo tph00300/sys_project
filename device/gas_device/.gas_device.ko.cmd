@@ -1,0 +1,1 @@
+cmd_/home/pi/doc/a/sys_teamproject/device/gas_device/gas_device.ko := ld -EL -r  -T ./scripts/module-common.lds --build-id  -o /home/pi/doc/a/sys_teamproject/device/gas_device/gas_device.ko /home/pi/doc/a/sys_teamproject/device/gas_device/gas_device.o /home/pi/doc/a/sys_teamproject/device/gas_device/gas_device.mod.o ;  true

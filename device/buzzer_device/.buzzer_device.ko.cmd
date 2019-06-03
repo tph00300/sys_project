@@ -1,0 +1,1 @@
+cmd_/home/pi/doc/a/sys_teamproject/device/buzzer_device/buzzer_device.ko := ld -EL -r  -T ./scripts/module-common.lds --build-id  -o /home/pi/doc/a/sys_teamproject/device/buzzer_device/buzzer_device.ko /home/pi/doc/a/sys_teamproject/device/buzzer_device/buzzer_device.o /home/pi/doc/a/sys_teamproject/device/buzzer_device/buzzer_device.mod.o ;  true
