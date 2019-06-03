@@ -201,7 +201,7 @@ void* loop5(void *data) // PIR
 			t++;
 		else if(flag==1)
 			f++;
-		printf("%d %d %d\n",flag,t,f);
+		printf("pir answer = %d nodetect = %d detect = %d\n",flag,t,f);
 		n++;
 		if(n>=30)
 		{
